@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="icon facebook">
+            <div class="toolTip">Facebook</div>
+            <span><i class="fa-brands fa-facebook"></i></span>
+        </div>
+
+
+        <div class="icon twitter">
+
+            <div class="toolTip"> Twitter</div>
+            <span><i class="fa-brands fa-twitter"></i></span>
+
+        </div>
+        <div class="icon instagram">
+
+            <div class="toolTip">Instagram</div>
+            <span><i class="fa-brands fa-instagram"></i></span>
+
+        </div>
+        <div class="icon github">
+
+            <div class="toolTip">Github</div>
+            <span><i class="fa-brands fa-github"></i></span>
+
+        </div>
+        <div class="icon youtube">
+
+            <div class="toolTip">Youtube</div>
+            <span><i class="fa-brands fa-youtube"></i></span>
+
+        </div>
+
+
+    </div>
+
+    <script>
+        var text = encodeURIComponent("Follow JavaScript Jeep form Amazing JavaScript Tutorial");
+
+
+        var url = "https://Firefox.com/@junashrestha/";
+        var user_id = "junashrestha";
+        var hash_tags = "JS,JavaScript,100DaysOfCode,Programming";
+        var params = "menubar=no,toolbar=no,status=no,width=570,height=570";
+
+
+        var facebook = document.querySelector('.facebook');
+        var twitter = document.querySelector('.twitter');
+        var instagram = document.querySelector('.instagram');
+        var github = document.querySelector('.github');
+        var youtube = document.querySelector('.youtube');
+
+
+        facebook.addEventListener('click', function (ev) {
+            console.log("hi");
+
+            let shareUrl = `http://www.facebook.com/sharer/sharer.php?u=${url}`;
+            window.open(shareUrl, "NewWindow", params);
+        });
+        twitter.addEventListener('click', function (ev) {
+            let shareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${text}&via=${user_id}&hashtags=${hash_tags}`;
+            window.open(shareUrl, "NewWindow", params);
+        });
+        instagram.addEventListener('click', function (ev) {
+            let shareUrl = `https://www.instagram.com/?hl=en/sharer?url=${url}&text=${text}&via=${user_id}&hashtags=${hash_tags}`
+            window.open(shareUrl, "NewWindow", params);
+        });
+        github.addEventListener('click', function (ev) {
+            let shareUrl = `https://github.com/git?url=${url}&text=${text}&via=${user_id}&hashtags=${hash_tags}`;
+            window.open(shareUrl, "NewWindow", params);
+        });
+
+
+
+    </script>
+</body>
+
+</html>
